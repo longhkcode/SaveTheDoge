@@ -1,4 +1,4 @@
-using UnityEditor.Animations;
+
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "EnemyData", menuName = "Scriptable Objects/EnemyData")]
@@ -9,5 +9,5 @@ public class EnemyData : ScriptableObject
     public string enemyName;
     [TextArea(3,10)] public string enemyDescription;
     public Sprite enemySprite;
-    public AnimatorController animatorController;
+    public RuntimeAnimatorController animatorController;
 }
