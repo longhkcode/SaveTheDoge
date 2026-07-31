@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b18541491685163419f3a8564290fef8, type: 3}
+  m_Name: Frog
+  m_EditorClassIdentifier: Assembly-CSharp::CharacterData
+  ID: 0
+  characterName: Frog
+  characterDescription: 'Frog
+
+'
+  characterSprite: {fileID: -7831243505025921218, guid: 450a4e30c7e3ad8478764cdbcdfe4411, type: 3}
+  animatorController: {fileID: 9100000, guid: 89346f0b4bb0d9f4098d7cee4c972063, type: 2}

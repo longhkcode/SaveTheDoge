@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b18541491685163419f3a8564290fef8, type: 3}
+  m_Name: Tech
+  m_EditorClassIdentifier: Assembly-CSharp::CharacterData
+  ID: 1
+  characterName: Tech
+  characterDescription: 'Technology
+
+'
+  characterSprite: {fileID: 2807021901552074156, guid: dd5f8ea1fbbce1b4b90c491453e8dedb, type: 3}
+  animatorController: {fileID: 9100000, guid: bd4f21b01c6a10b43a3afd3a206f0407, type: 2}

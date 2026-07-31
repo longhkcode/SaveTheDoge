@@ -82,7 +82,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 973689709
-  m_SortingLayer: 6
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 3578035753372260634, guid: 9865ae962e1248940a52516feeeb4f98, type: 3}
@@ -130,8 +130,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef8e84061c0e681498652101149dae9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAI
+  allEnemySkins:
+  - {fileID: 11400000, guid: 7cefcb11ee7e273438670de7778e6ef8, type: 2}
+  - {fileID: 11400000, guid: 5c0d77a3ffb0f7645ada6edb8ce0dd0f, type: 2}
+  - {fileID: 11400000, guid: 2838ebd861b201a4bbe0d52feda5c7de, type: 2}
   speed: 6
   noiseIntensity: 0.8
+  acceleration: 50
+  bounceForceMultiplier: 8
+  detectionRange: 4
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  rayCount: 13
+  fovAngle: 180
 --- !u!58 &6539067069379635291
 CircleCollider2D:
   m_ObjectHideFlags: 0

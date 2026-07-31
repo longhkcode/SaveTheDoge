@@ -13,12 +13,14 @@ public class LineController : MonoBehaviour
     private Vector2 oldPoint;
 
     [Header("System")]
-    // 1. Chuyển thành List (hoặc Script.SpamEnemy[]) để kéo thả nhiều tổ ong trong Inspector
     [SerializeField]
-    private List<Script.SpamEnemy> spamEnemyScripts = new(); 
+    private List<Script.SpamEnemy> spamEnemyScripts = new();
 
     bool spawned = false;
     bool drawing = false;
+
+    // Đã vẽ hay chưa
+    private bool hasDrawn = false;
 
     void Start()
     {
@@ -46,7 +48,16 @@ public class LineController : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
+            // Nếu đã vẽ rồi thì không cho vẽ nữa
+            if (hasDrawn)
+                return;
+
             drawing = true;
+
+            if (GameManager.Instance != null)
+            {
+                GameManager.Instance.PauseGameForDrawing();
+            }
 
             rb.simulated = false;
             rb.linearVelocity = Vector2.zero;
@@ -55,9 +66,7 @@ public class LineController : MonoBehaviour
             transform.position = Vector3.zero;
 
             localPoints.Clear();
-
             line.positionCount = 0;
-
             edge.SetPoints(new List<Vector2>());
 
             oldPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -89,18 +98,35 @@ public class LineController : MonoBehaviour
 
         if (Input.GetMouseButtonUp(0))
         {
+            if (!drawing)
+                return;
+
             drawing = false;
 
             if (localPoints.Count < 2)
+            {
+                if (GameManager.Instance != null)
+                {
+                    GameManager.Instance.ResumeGameAfterDrawing();
+                }
                 return;
+            }
+
+            // Đánh dấu đã vẽ xong
+            hasDrawn = true;
 
             rb.simulated = true;
+
+            if (GameManager.Instance != null)
+            {
+                GameManager.Instance.ResumeGameAfterDrawing();
+                GameManager.Instance.StartCountdown();
+            }
 
             if (!spawned)
             {
                 spawned = true;
 
-                // 2. Duyệt qua mảng/danh sách để gọi StartSpawning() cho TẤT CẢ tổ ong
                 if (spamEnemyScripts != null && spamEnemyScripts.Count > 0)
                 {
                     foreach (var spawner in spamEnemyScripts)

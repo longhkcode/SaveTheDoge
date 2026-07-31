@@ -82,7 +82,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -561513633
-  m_SortingLayer: 4
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7223305265474691786, guid: 1e43c2989f14a0a41b7ce6db41067693, type: 3}
@@ -193,3 +193,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8584e9cb67bd4f24180ed81f25fa553e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player_Controller
+  allCharacterSkins:
+  - {fileID: 11400000, guid: a8b49d42e460c6c4ba51d08532be03ff, type: 2}
+  - {fileID: 11400000, guid: 5789900f17b7dae4cbb9c2234778a412, type: 2}
+  - {fileID: 11400000, guid: 80549f617737bfd41af21e58495fc729, type: 2}
+  - {fileID: 11400000, guid: 25e696faf75761348b6bd5d94a8ea80a, type: 2}
+  - {fileID: 11400000, guid: d05c1ce0491486b4b902b8eec53a0ae8, type: 2}
+  - {fileID: 11400000, guid: 39a3b495b3dfa9e4381a2af913567266, type: 2}
+  alertDistance: 4

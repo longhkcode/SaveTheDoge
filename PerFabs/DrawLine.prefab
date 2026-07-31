@@ -13,8 +13,7 @@ GameObject:
   - component: {fileID: 7003170596789805235}
   - component: {fileID: 1288897675669329009}
   - component: {fileID: 999754130874672741}
-  - component: {fileID: 2995601225331626299}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: DrawLine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -237,19 +236,3 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
---- !u!114 &2995601225331626299
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 167978182082500907}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 183748dd497aa473a98ff0cd8cb67fc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: AstarPathfindingProject::Pathfinding.DynamicGridObstacle
-  version: 1
-  uniqueID: 1087863895986967308
-  updateError: 0.02
-  checkTime: 0.05
